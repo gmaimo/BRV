@@ -1,20 +1,23 @@
 /* iconos bootstrap */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,300;0,500;0,700;0,800;1,400&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,300;0,500;0,700;0,800;1,400&family=Poppins:wght@300&family=Roboto:wght@400;500&display=swap');
 
 :root{
     --main-color: rgb(255, 121, 23);
-    --secondary-color: rgb(104, 219, 255);
+    --secondary-color: #949292;
+    --filter: invert(66%) sepia(0%) saturate(30%) hue-rotate(301deg) brightness(88%) contrast(89%);
     --bg-color: black;
     --cta-color: red;
     --cta--bg: red;
     --cta-hover: red;
     --font:  'Montserrat', sans-serif;
-    --specialfont: 'Dancing Script', cursive;
-    --nav-bgcolor: black;
-    --nav-color: white;
+    --special-font: 'Roboto', sans-serif;
+    --nav-color: rgb(200, 200, 200);
+    --nav-bgcolor: rgba(43, 43, 43, 0.839);
     --nav-img: url(/img2/99.jpg);
+    --nav-icon: invert(100%) sepia(0%) saturate(2%) hue-rotate(54deg) brightness(106%) contrast(101%);
+    --coooc: rgb(91, 89, 89);
 }
 
 *{
@@ -23,49 +26,97 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body {
-    font-family: var(--main-font);
+    font-family: var(--special-font);
     background-color: var(--bg-color);
 }
 
-.bg-img{
+/* navbar */
+.nav{
+    height: 10vh;
+}
+/* .nav-img{
     background-image: var(--nav-img);
     height: 11em;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: -360px;
-}
-
-.nav-bgcolor{
+} */
+.nav-color{
     background-color: var(--nav-bgcolor);
 }
-
-.nav-color{
+/* .nav-text{
     color: var(--nav-color);
-    font-size: 18px;
-}
-
-.nav-color:hover{
+    font-size: 16px;
+} */
+.nav-text:hover{
     color: #DD403A;
 }
-
-.brand-logo{
-    font-family: var(--secondary-font);
+/* .nav-text:active{
+    color: white;
+} */
+.nav-icon{
+    filter: var(--nav-icon);
     font-weight: 700;
 }
-
-h1, .title{
-    font-family: var(--primary-font);
-    font-weight: 600;
-    
-    line-height: 36px;
+.card-brand{
+    height: 35px;
+    margin-right: -9px;
 }
+.mm{
+    margin-right: auto;
+}
+/* business info */
+.business-container{
+    /* background-image: url(../img2/62.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 75vh;
+    opacity: .3; */
+}
+.card-img{
+    opacity: .3;
 
+}
 .title{
-    font-size: 30px;
+    font-family: var(--special-font);
+    font-weight: 600;
+    line-height: 120px;
+    letter-spacing: 2px;
 }
+.absss{
+    position: absolute;
+}
+.absss2{
+    width: 100%;
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+
+}
+
+.relativv{
+    position: relative;
+    height: 90vh;
+}
+/* card */
+.card-border{
+    border: 0px solid white;
+}
+.card-img{
+    height: 55vh;
+    object-fit: cover;
+}
+.sec-color{
+    color: var(--secondary-color);
+}
+.icon-color{
+    filter: var(--nav-icon)
+}
+
 
 .secondary-font {
     font-family: var(--secondary-font);
@@ -150,10 +201,7 @@ h1, .title{
     margin-top: -50px;
 }
 
-.business-img{
-    height: 45vh;
-    object-fit: cover;
-}
+
 
 .border-radius{
     border-radius: 300px;
@@ -192,21 +240,13 @@ a{
     color: #BFACAA;
 }
 
-.logo-accent{
-    filter: invert(82%) sepia(20%) saturate(179%) hue-rotate(318deg) brightness(84%) contrast(86%);
-}/*
-.text-headline{
-    color: #D0C4DF;
-} */
+
 
 
 .bg-accent{
     background-color: #BFACAA;
 }
 
-.mt-6{
-    margin-top: 50px;
-}
 
 .mx-6{
     margin: 0 160px;
@@ -224,14 +264,12 @@ a{
     background-color: #05204A;
 }
 
-.border-x{
-    border: 6px solid white;
-}
+/* 
 
 .border-y{
     border-top: 6px solid white;
     border-bottom: 6px solid white;
-}
+} */
 
 .gap-horario{
     gap: 30px;
@@ -241,9 +279,6 @@ a{
     background-color: black;
 }
 
-.ssss{
-    position: sticky;
-}
 
 
 .opinions{
@@ -328,28 +363,21 @@ a{
 
 
 
-
+/* 
 .p-abs{
     position: absolute;
 }
 
 .p-rel{
     position: relative;
-}
+} */
 
-.logob{
-    height: 10.5em;
-    left: calc(100% - 12em);
-    
-}
+
 
 .href-0{
     text-decoration: none;
 }
 
-.link-accent{
-    color: #BFACAA;
-}
 
 
 
@@ -375,28 +403,7 @@ a{
     object-fit: cover;
 }
 
-.blurr{
-    z-index: 9999;
-    position: absolute;
-    right: 0;
-    height: 621px;
-    width: 100px;
-    pointer-events: none;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-}
 
-.blur{
-    z-index: 9999;
-    position: absolute;
-    right: 0;
-    transform: translateX(-100px);
-    height: 621px;
-    width: 100px;
-    pointer-events: none;
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
-}
 
 
 
@@ -404,12 +411,11 @@ a{
 /* seccion aboutus */
 
 .blogal{
-    position: relative;
-    max-width: 1400px;
-    width: 100%;
+    max-width: 80vw;
+    height: 70vh;
+    transform: translateX(10vw);
     /* pad: 50px 0; */
     overflow: hidden;
-    height: 40em;
 }
 
 /* .blogal .image{
@@ -435,33 +441,17 @@ a{
     padding: 0 110px;
 }
 
-.blogimage{
-    min-width: 35vw;
-    height: 70vh;
-    object-fit: cover;
-    /* margin-left: 60px; */
-    object-position: 0% 20%;
-    
-}
 
-.aboutrel{
-    position: relative;
-}
 
 .blogimage2, .blogimage3{
     object-fit: cover;
     border: 2px solid black;
 }
 
-.blogimage2{
-    
-    min-width: 360px;
-    height: 350px;
-    position: absolute;
-    top: 200px;
-    left: 370px;
-    z-index: 1;
-    object-position: 0 20% 20%;
+.blogimage{min-width: 30vw;
+    width:35%;
+    height: auto;
+    margin-left: 160px;
 }
 
 .blogimage3{
@@ -475,19 +465,25 @@ a{
     
 }
 
-.blogal .slide .blogp1{
+.blogp{
+    padding: 0 160px 0 40px;
+    margin-bottom: auto;
+    margin-top: 70px;
     
-    width: 33vw;
-    /* text-align: center; */
+    /* width: 33vw;
+    /* text-align: center; 
     font-size: 14px;
-    /* font-weight: 400; */
+    /* font-weight: 400; 
     padding: 0 0 0 50px;
     position: absolute;
     
     top: 130px;
-    left: 750px;
-    /* padding-right: 160px; */
+    left: 750px; 
+    /* padding-right: 160px; 
     /* transform: translateX(-50px); */
+}
+.blogp>h2{
+    margin: 20px 0 30px 0;
 }
 
 .blogal .slide .blogp2{
@@ -549,7 +545,7 @@ a{
 
 .blogimage5{
     
-    min-width: 32vw;
+    width: 550px;
     height: 70vh;
     position: absolute;
     bottom: 80px;
@@ -629,8 +625,8 @@ a{
 .blogimage12{
     
     border-radius: 3%;
-    width: 38vw;
-    height: 68vh;
+    width: 550px;
+    height: 550px;
     position: absolute;
     bottom: 80px;
     right: 190px;
