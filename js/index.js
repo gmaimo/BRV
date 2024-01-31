@@ -59,6 +59,72 @@ for (let i = 0; i < links.length; i++) {
 }
 
 
+//cambiar active en navbar   REVISAR
+const navEls = document.querySelectorAll('.nav-item');
+navEls.forEach(navEl => {
+	navEl.addEventListener('click', () => {
+		document.querySelector('.active')?.classList.remove('active');
+		navEl.classList.add('active');
+	});
+});
+
+// navbar scroll theme
+
+window.addEventListener('scroll', () => {
+	let nav = document.querySelector('#nav');
+	let logo = document.getElementById('nav-logo');
+	let button = document.getElementById('nav-button');
+	if(window.scrollY > 0){
+		nav.classList.add('navbar-light', 'bg-light');
+		nav.classList.remove('navbar-dark', 'bg-transparent');
+		logo.classList.add('text-dark');
+		logo.classList.remove('text-white');
+		button.classList.add('btn-outline-dark');
+		button.classList.remove('btn-outline-light');
+	} else {
+		nav.classList.add('navbar-dark', 'bg-transparent');
+		nav.classList.remove('navbar-light', 'bg-light');
+		logo.classList.add('text-white');
+		logo.classList.remove('text-dark');
+		button.classList.add('btn-outline-light');
+		button.classList.remove('btn-outline-dark');
+	} 
+});
 
 
+// mouseover on cards
 
+let cards = document.querySelectorAll('.card');
+let cardIcons = document.querySelectorAll('.service-icon-filter');
+cards.forEach(card => {
+	card.addEventListener('mouseover', () => {
+		card.classList.remove('bg-olive');
+		card.classList.add('bg-olive2');
+		card.querySelector('.service-icon').classList.remove('service-icon-filter');
+		card.querySelector('h5').classList.add('text-dark');
+		// cardIcons.forEach(cardIcon => {
+		// 	if()
+		// 	cardIcon.classList.remove('service-icon-filter');
+		// });
+	});
+	card.addEventListener('mouseout', () => {
+		card.classList.add('bg-olive');
+		card.classList.remove('bg-olive2');
+		card.querySelector('.service-icon').classList.add('service-icon-filter');
+		card.querySelector('h5').classList.remove('text-dark');
+
+	});
+});
+
+
+// let cards = document.querySelectorAll('.card');
+// cards.forEach(card => {
+// 	card.addEventListener('mouseover', () => {
+// 		card.classList.add('bg-warning');
+// 		setTimeout(() => {
+// 			card.classList.remove('bg-warning');
+// 		  }, 2000);
+// 	},
+// 	false,
+// 	);
+// });

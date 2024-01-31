@@ -29,30 +29,30 @@
     
     <!-- navbar -->
     <header>
-        <nav class="nav navbar navbar-expand-lg navbar-dark bg-black">
+        <nav class="nav navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" id="nav">
             <a class="navbar-brand mr-0" href="#">         
                 <img class="business-logo" src="./img/logo/logo.png" alt="logo de la barberia">
-                <a class="nav-link text-white" href="#">Barberia Roberto Viloria</a>
+                <a class="nav-link text-white" href="#top" id="nav-logo">Barberia Roberto Viloria</a>
             </a>
             
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <!-- responsive quitar d-flex -->
+                                    <!-- responsive quitar d-flex -->
             <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                    <li class="nav-item active mx-2">
-                        <a class="nav-link" href="https://booksy.com/es-es/3291_barberia-roberto-viloria_barberia_68707_llucmajor" target="_blank" >Reservar cita</a>
+                    <li class="mx-2">
+                        <a href="https://booksy.com/es-es/3291_barberia-roberto-viloria_barberia_68707_llucmajor" target="_blank" ><button class="btn btn-outline-light fw-bold" id="nav-button">Reservar cita</button></a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Servicios</a>
+                        <a class="nav-link" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="#blog">Blog</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a class="nav-link" href="#">Galería</a>
+                        <a class="nav-link" href="#galeria">Galería</a>
                     </li>
                     <li class="nav-item">
                         <a href="https://www.tiktok.com/@barberiarobertoviloria" target="_blank" class="mx-1 btn nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -72,15 +72,15 @@
     <main>
         <!-- Business info -->
         <section>
-            <div class="container-fluid">
+            <div class="container-fluid business-info">
                 <div class="row">
                     <div class="col-sm-12 p-0">
-                        <div class="mx-auto text-white">
-                            <img class="header-bg" style="height: 80vh;" src="/img/62.jpg" alt="imagen general del interior de la barberia donde se puede ver el sofa la mesa de cobro y la zona donde se realizan los servicios de barbería">
+                        <div class="mx-auto text-white" style="height: 90vh;">
+                            <!-- <img class="header-bg"  src="/img/14.jpg" alt="imagen general del interior de la barberia donde se puede ver el sofa la mesa de cobro y la zona donde se realizan los servicios de barbería"> -->
                             <div class="header">
-                                <h2 class="text-center mb-0 title display-2 text-uppercase">Barberia Roberto Viloria</h2>
-                                <div class="text-center pt-4 mb-4">
-                                    <a href="https://booksy.com/es-es/3291_barberia-roberto-viloria_barberia_68707_llucmajor" target="_blank" class="mx-1 btn btn-warning fw-bold">Reserva tu cita en Booksy&copy</a>
+                                <h2 class="text-center mb-0 title display-4 text-uppercase">Barberia <span class="fw-bold">Roberto Viloria</span></h2>
+                                <div class="text-center pt-3">
+                                    <a href="https://booksy.com/es-es/3291_barberia-roberto-viloria_barberia_68707_llucmajor" target="_blank" class="mx-1 btn btn-warning fw-bold py-2 px-3">Reserva tu cita en Booksy&copy</a>
                                 </div>
                             </div>
                         </div>
@@ -90,51 +90,51 @@
         </section>
         
         <!-- seccion servicios -->
-        <section class="container-fluid px-5 bg-black text-white pt-5" style="height: 80vh;">
-            <h2 class="text-center text-uppercase pt-5">Nuestros Servicios</h2>
-            <h6 class="text-center px-5 mx-5 pt-5">Somos especialistas en la trecnica mle Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate mollitia animi dita aliquam recusandae odit officiis quidem minima nemo. Delectus, nam?</h6>
+        <section class="container-fluid px-5 bg-black text-white pt-3" style="height: 80vh;" id="servicios">
+            <h2 class="text-center text-uppercase pt-5 title">Nuestros Servicios</h2>
+            <h6 class="text-center px-5 mx-5 pt-2">Somos especialistas en la trecnica mle Lorem ipsum dolor,  <a href="https://booksy.com/es-es/3291_barberia-roberto-viloria_barberia_68707_llucmajor" class="text-warning">reserva</a> sit amet consectetur adipisicing elit. Cupiditate mollitia animi dita aliquam recusandae odit officiis quidem minima nemo. Delectus, nam?</h6>
             <div class="row px-5 mx-3 pt-2">
                 <div class="col-sm-6 col-md-3 col-xl-3 d-flex justify-content-center mt-3 pt-5">
-                    <div class="card d-flex flex-row flex-wrap bg-olive"  style="width: 16rem;">
+                    <div class="card d-flex flex-row flex-wrap bg-olive border" style="width: 16rem;">
                         <div>
-                            <img src="/img/icons/scissors.png" class="card-img-top service-icon" alt="icono de tijeras">
+                            <img src="/img/icons/scissors.png" class="card-img-top service-icon service-icon-filter" alt="icono de tijeras">
                         </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title text-warning">Corte de pelo</h5>
-                            <p">Manejamos todos los estilos de corte, tanto clásicos como modernos.</p>
+                            <h5 class="card-title">Corte de pelo</h5>
+                            <p class="text-muted">Manejamos todos los estilos de corte, tanto clásicos como modernos.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-xl-3 d-flex justify-content-center mt-3 pt-5">
-                    <div class="card d-flex flex-row flex-wrap bg-olive"  style="width: 16rem;">
+                    <div class="card d-flex flex-row flex-wrap bg-olive border" style="width: 16rem;">
                         <div>
-                            <img src="/img/icons/hairstyle.png" class="card-img-top service-icon" alt="icono de barba">
+                            <img src="/img/icons/hairstyle.png" class="card-img-top service-icon service-icon-filter" alt="icono de barba">
                         </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title text-warning">Arreglo barba</h5>
-                            <p>Corte y/o arreglo de barba, repaso de contornos y perfiles.</p>
+                            <h5 class="card-title">Arreglo barba</h5>
+                            <p class="text-muted">Corte y/o arreglo de barba, repaso de contornos y perfiles.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-xl-3 d-flex justify-content-center mt-3 pt-5">
-                    <div class="card d-flex flex-row flex-wrap bg-olive"  style="width: 16rem;">
+                    <div class="card d-flex flex-row flex-wrap bg-olive border" style="width: 16rem;">
                         <div>
-                            <img src="/img/icons/shaving-razor.png" class="card-img-top service-icon" alt="icono de cuchilla de afeitar">
+                            <img src="/img/icons/shaving-razor.png" class="card-img-top service-icon service-icon-filter" alt="icono de cuchilla de afeitar">
                         </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title text-warning">Afeitado tradicional</h5>
-                            <p>Disponemos de un ritual propio de afeitado con cuchilla.</p>
+                            <h5 class="card-title">Afeitado tradicional</h5>
+                            <p class="text-muted">Disponemos de un ritual propio de afeitado con cuchilla.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-xl-3 d-flex justify-content-center mt-3 pt-5">
-                    <div class="card d-flex flex-row flex-wrap bg-olive"  style="width: 16rem;">
+                    <div class="card d-flex flex-row flex-wrap bg-olive border" style="width: 16rem;">
                         <div>
-                            <img src="/img/icons/wax.png" class="card-img-top service-icon" alt="icono de cera de depilar">
+                            <img src="/img/icons/wax.png" class="card-img-top service-icon service-icon-filter" alt="icono de cera de depilar">
                         </div>
                         <div class="card-body text-center">
-                            <h5 class="card-title text-warning">Depilación cejas</h5>
-                            <p>Ofrecemos servicio de depilación de cejas y vello facial.</p>
+                            <h5 class="card-title">Depilación cejas</h5>
+                            <p class="text-muted">Ofrecemos servicio de depilación de cejas y vello facial.</p>
                         </div>
                     </div>
                 </div>
@@ -144,65 +144,69 @@
         
         
         <!-- seccion aboutus -->
-        <section class="container-fluid text-white bg-black d-flex align-items-center justify-content-center vh-100">
-            <div class="row d-flex justify-content-center bg-olive">
-                <div class="col-12 blog-box mySwiper p-0">
-                    <div class="esti-content swiper-wrapper">
-                        <div class="slide swiper-slide">
-                            <div>
-                                <img src="./img/canva7.JPG" alt="productos de cudcuhfibuasf" class="blog-img">
+        <section class="container-fluid text-white vh-100 mt-5" id="blog">
+            <h2 class="text-center text-uppercase py-5 title">Blog</h2>
+            <div class="bg-black d-flex align-items-center justify-content-center">
+                <div class="row d-flex justify-content-center bg-white text-dark">
+                    <div class="col-12 blog-box mySwiper p-0">
+                        <div class="esti-content swiper-wrapper">
+                            <div class="slide swiper-slide">
+                                <div>
+                                    <img src="./img/canva7.JPG" alt="productos de cudcuhfibuasf" class="blog-img">
+                                </div>
+                                <div class="blog-p">
+                                    <h2 class="mb-4">Beardburys. Nuestra marca de confianza</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
+                                </div>     
                             </div>
-                            <div class="blog-p">
-                                <h2 class="text-warning mb-4">Beardburys. Nuestra marca de confianza</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
-                            </div>     
-                        </div>
-                        <div class="slide swiper-slide d-flex flex-row aboutrel">
-                            <div>
-                                <img src="./img/canva2.JPG" alt="" class="blog-img">
+                            <div class="slide swiper-slide d-flex flex-row aboutrel">
+                                <div>
+                                    <img src="./img/canva2.JPG" alt="" class="blog-img">
+                                </div>
+                                <div class="blog-p">
+                                    <h2 class="text-warning mb-4">Beardburys. Nuestra marca de confianza</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
+                                </div>     
                             </div>
-                            <div class="blog-p">
-                                <h2 class="text-warning mb-4">Beardburys. Nuestra marca de confianza</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
-                            </div>     
-                        </div>
-                        <div class="slide swiper-slide d-flex flex-row aboutrel">
-                            <div>
-                                <img src="./img/canva4.JPG" alt="" class="blog-img">
+                            <div class="slide swiper-slide d-flex flex-row aboutrel">
+                                <div>
+                                    <img src="./img/canva4.JPG" alt="" class="blog-img">
+                                </div>
+                                <div class="blog-p">
+                                    <h2 class="text-warning mb-4">Beardburys. Nuestra marca de confianza</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
+                                </div>     
                             </div>
-                            <div class="blog-p">
-                                <h2 class="text-warning mb-4">Beardburys. Nuestra marca de confianza</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
-                            </div>     
-                        </div>
-                        <div class="slide swiper-slide d-flex flex-row aboutrel">
-                            <div>
-                                <img src="./img/canva5.JPG" alt="" class="blog-img">
+                            <div class="slide swiper-slide d-flex flex-row aboutrel">
+                                <div>
+                                    <img src="./img/canva5.JPG" alt="" class="blog-img">
+                                </div>
+                                <div class="blog-p">
+                                    <h2 class="text-warning mb-4">Beardburys. Nuestra marca de confianza</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
+                                </div>     
                             </div>
-                            <div class="blog-p">
-                                <h2 class="text-warning mb-4">Beardburys. Nuestra marca de confianza</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
-                            </div>     
-                        </div>
-                        <div class="slide swiper-slide d-flex flex-row aboutrel">
-                            <div>
-                                <img src="./img/canva6.JPG" alt="" class="blog-img">
+                            <div class="slide swiper-slide d-flex flex-row aboutrel">
+                                <div>
+                                    <img src="./img/canva6.JPG" alt="" class="blog-img">
+                                </div>
+                                <div class="blog-p">
+                                    <h2 class="text-warning mb-4">Beardburys. Nuestra marca de confianza</h2>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
+                                </div>     
                             </div>
-                            <div class="blog-p">
-                                <h2 class="text-warning mb-4">Beardburys. Nuestra marca de confianza</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt asperiores non, laudantium quisquam nemo ea voluptates, repudiandae odio, dicta rerum ullam animi at dignissimos ipsum. Autem vel totam tempora consequuntur?</p>
-                            </div>     
                         </div>
+                        <div class="swiper-button-next btn-swipe bg-transparent"></div>
+                        <div class="swiper-button-prev btn-swipe bg-transparent"></div>
+                        <div class="swiper-pagination d-none"></div>
                     </div>
-                    <div class="swiper-button-next btn-swipe"></div>
-                    <div class="swiper-button-prev btn-swipe"></div>
-                    <div class="swiper-pagination d-none"></div>
                 </div>
             </div>
         </section>
         
         <!-- seccion galeria de imagenes -->
-        <section class="container-fluid vh-100 text-white pt-5">
+        <section class="container-fluid vh-100 text-white" id="galeria">
+            <h2 class="text-center text-uppercase pt-5 title">Galería</h2>
             <div class="row">
                 <div id="gallery" class="col-12 gallery pl-0">
                     <a href="./img/1.JPG" data-lightbox="models" data-title="Caption1">
@@ -500,51 +504,50 @@
         </section>
         
         <!-- seccion opiniones -->
-        <section class="container-fluid opinions text-white" style="height: 70vh;">
-            <h2 class="text-center">Opiniones</h2>
-            
-            <div class="row d-flex justify-content-center mt-5">
+        <section class="container-fluid opinions text-white mt-3" style="height: 70vh;">
+            <h2 class="text-center text-uppercase py-5 title">Opiniones</h2>           
+            <div class="row d-flex justify-content-center mt-2">
                 <div class="col-12 testimonial mySwiper">
                     <div class="esti-content swiper-wrapper">
                         <div class="slide swiper-slide">
-                            <img src="./img/tito.jpeg" alt="avatar de personaje de dibujos animados" class="image">
+                            <!-- <img src="./img/tito.jpeg" alt="avatar de personaje de dibujos animados" class="image"> -->
                             <p>Roberto es un verdadero artista, da gusto ir a una barbería - y eso que tengo que conducir unos 45km! - tradicional pero con todos los instrumentos de la modernidad, y siempre la conversa es grata.</p>
                             <div class="name">Roger M.</div>
                         </div>
                         <div class="slide swiper-slide">
-                            <img src="./img/kenny-facts.jpg" alt="avatar de personaje de dibujos animados" class="image">
+                            <!-- <img src="./img/kenny-facts.jpg" alt="avatar de personaje de dibujos animados" class="image"> -->
                             <p>Fué perfecto todo, puntualidad, amabilidad y profesionalidad.</p>
                             <div class="name">Blanca M.</div>
                         </div>
                         <div class="slide swiper-slide">
-                            <img src="./img/peter.webp" alt="avatar de personaje de dibujos animados" class="image">
+                            <!-- <img src="./img/peter.webp" alt="avatar de personaje de dibujos animados" class="image"> -->
                             <p>Empecé yendo cuando abrió hace años, pero luego me olvidaba de pedir cita y ahora con la app es fácil y he vuelto. Super contento con como me ha quedado el corte. Los empleados un 10! Y gran trabajo de Xisca.</p>
                             <div class="name">David J.</div>
                         </div>
                         <div class="slide swiper-slide">
-                            <img src="./img/peppa.jpeg" alt="avatar de personaje de dibujos animados" class="image">
+                            <!-- <img src="./img/peppa.jpeg" alt="avatar de personaje de dibujos animados" class="image"> -->
                             <p>Muy bien buen servicio, buenos profesionales, local agradable, todo correcto. Repetiré sin duda.</p>
                             <div class="name">Miguel G.</div>
                         </div>
                         <div class="slide swiper-slide">
-                            <img src="./img//power.webp" alt="avatar de personaje de dibujos animados" class="image">
+                            <!-- <img src="./img//power.webp" alt="avatar de personaje de dibujos animados" class="image"> -->
                             <p>Me encanta como me ha cortado el pelo y como me ha tratado.</p>
                             <div class="name">Aitor R.</div>
                         </div>
                         <div class="slide swiper-slide">
-                            <img src="./img/cookie-monster-portrait.jpg" alt="avatar de personaje de dibujos animados" class="image">
+                            <!-- <img src="./img/cookie-monster-portrait.jpg" alt="avatar de personaje de dibujos animados" class="image"> -->
                             <p>Experiencia 10! Xisca tiene mucha mano para los niños y eso hace que mi hijo esté encantado de ir a cortarse el pelo. además lo deja siempre guapísimo...</p>
                             <div class="name">Silvia E.</div>
                         </div>
                         <div class="slide swiper-slide">
-                            <img src="./img/gus.jpg" alt="avatar de personaje de dibujos animados" class="image">
+                            <!-- <img src="./img/gus.jpg" alt="avatar de personaje de dibujos animados" class="image"> -->
                             <p>El ambiente es increible, siempre buena música de fondo, te tratan como a un rey y hacen super bien su trabajo.</p>
                             <div class="name">Juan Sebastian P.</div>
                         </div>
                         
                     </div>
-                    <div class="swiper-button-next btn-swipe"></div>
-                    <div class="swiper-button-prev btn-swipe"></div>
+                    <div class="swiper-button-next btn-swipe bg-transparent"></div>
+                    <div class="swiper-button-prev btn-swipe bg-transparent"></div>
                     <div class="swiper-pagination"></div>
                 </div>
                 
@@ -559,7 +562,7 @@
         
         
         
-        <footer class="container">
+        <footer class="container mt-5 pt-5">
             <div class="border-top mb-3 pt-2 text-center d-flex flex-column justify-content-center align-items-center">
                 <a href="https://maps.app.goo.gl/GoUGBJAruzZjMCSs5" target="_blank" class="text-white">Carrer d'es Born, 7 - Llucmajor</a>
                 <a href="tel:659694567" target="_blank" class="text-white">659 694 567</a>
