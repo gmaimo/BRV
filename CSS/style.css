@@ -1,8 +1,7 @@
 /* iconos bootstrap */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 /* google fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@300&family=Roboto:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@300&family=Roboto:wght@400;500&display=swap');
 :root{
     --main-color: rgb(255, 121, 23);
     --secondary-color: #949292;
@@ -72,11 +71,20 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
-
+.main-title{
+    font-weight: 100;
+}
 .title{
     font-family: var(--special-font);
     line-height: 120px;
     letter-spacing: 12px;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.headline{
+    animation: fadein 1.5s ease-in;
 }
 
 .fw-bold{
@@ -84,6 +92,26 @@ body {
 }
 
 /* servicios */
+.servicios{
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+}
+
+.servicios::before{
+    content: "";
+    background-image: url(../img/logo/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.12;
+}
+
 .card-title{
     margin-top: -105px;
     margin-bottom: 30px;
@@ -128,6 +156,10 @@ body {
     align-items: center;
 }
 
+.blog-bg{
+    background-color: rgba(255, 255, 255, 0.626);
+}
+
 .blog-img{
     min-width: 26vw;
     width:35%;
@@ -169,7 +201,7 @@ body {
 
 .btn-swipe::after, .btn-swipe::before{
     font-size: 20px;
-    color: rgb(125, 125, 125);
+    color: rgb(85, 85, 85);
 }
 
 .swiper-pagination-bullet{
@@ -184,10 +216,11 @@ body {
 /* galeria de imagenes */
 .gallery{
     display: grid;
-    grid-template-columns: repeat(32 , minmax(250px, 1fr));
+    grid-template-columns: repeat(15 , minmax(250px, 1fr));
     /* grid-auto-columns: calc(100% - 4rem); */
     /* grid-auto-flow: column; */
-    grid-gap: 5px;
+    grid-column-gap: 93px;
+    grid-row-gap: 5px;
     height: 610px;
     grid-row: 3;
     overflow-y: hidden;
@@ -199,11 +232,15 @@ body {
     /* min-width: 110px;
     height: 110px;
     line-height: 110px; */
-    width: 100%;
+    width: 135%;
     height: 200px;
     object-fit: cover;
 }
 
+.filterOn{
+    filter: grayscale(1);
+    opacity: .75;
+}
 
 
 /* opiniones */

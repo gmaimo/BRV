@@ -1,16 +1,16 @@
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  // spaceBetween: 30,
-  grabCursor: true,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+	slidesPerView: 1,
+	// spaceBetween: 30,
+	grabCursor: true,
+	loop: true,
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
 });
 
 
@@ -102,29 +102,41 @@ cards.forEach(card => {
 		card.classList.add('bg-olive2');
 		card.querySelector('.service-icon').classList.remove('service-icon-filter');
 		card.querySelector('h5').classList.add('text-dark');
-		// cardIcons.forEach(cardIcon => {
-		// 	if()
-		// 	cardIcon.classList.remove('service-icon-filter');
-		// });
 	});
 	card.addEventListener('mouseout', () => {
 		card.classList.add('bg-olive');
 		card.classList.remove('bg-olive2');
 		card.querySelector('.service-icon').classList.add('service-icon-filter');
 		card.querySelector('h5').classList.remove('text-dark');
-
 	});
 });
 
 
-// let cards = document.querySelectorAll('.card');
-// cards.forEach(card => {
-// 	card.addEventListener('mouseover', () => {
-// 		card.classList.add('bg-warning');
-// 		setTimeout(() => {
-// 			card.classList.remove('bg-warning');
-// 		  }, 2000);
-// 	},
-// 	false,
-// 	);
-// });
+//reveal on hover over gallery image
+let galleryImgs = document.querySelectorAll('.galleryImg');
+// let previousRandomImg = null;
+
+// function repeatOften() {
+// 	if (previousRandomImg) previousRandomImg.classList.toggle('filterOn')
+// 	let random = Math.floor(Math.random() * (galleryImgs.length - 1)) + 0;
+// 	let randomImg = galleryImgs[random];
+// 	randomImg.classList.toggle('filterOn');
+// 	previousRandomImg = randomImg;
+// 	setTimeout(repeatOften, 2000);
+// }
+// repeatOften();
+
+galleryImgs.forEach(galleryImg => {
+	galleryImg.addEventListener('mouseover', () => {
+		galleryImg.classList.remove('filterOn');
+	});
+	galleryImg.addEventListener('mouseout', () => {
+		galleryImg.classList.add('filterOn');
+	});
+});
+
+
+
+
+
+
